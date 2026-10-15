@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Reviews | Apex Labs</title>
+  <meta name="description" content="Read client feedback about Apex Labs website design and share your experience.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .review-stars { color: #60A5FA; letter-spacing: .12em; font-size: 1.15rem; }
+    .review-card { border: 1px solid rgba(148,163,184,.25); border-radius: 16px; padding: 1.25rem; background: rgba(255,255,255,.03); }
+    .review-form { display: grid; gap: 1rem; max-width: 720px; }
+    .review-form label { display: grid; gap: .45rem; font-weight: 600; }
+    .review-form input, .review-form select, .review-form textarea { width: 100%; padding: .8rem .9rem; border-radius: 10px; border: 1px solid rgba(148,163,184,.45); background: #101827; color: #fff; font: inherit; }
+    .review-form textarea { min-height: 120px; resize: vertical; }
+    .review-note { color: #b8c3d4; font-size: .92rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Apex Labs home"><img class="logo-image" src="apex-logo.jpeg" alt="Apex Labs logo"><span>Apex Labs</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Our Work</a><a class="active" href="reviews.html">Reviews</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">CLIENT FEEDBACK</p>
+        <h1>Good work. Honest feedback.</h1>
+        <p>As Apex Labs grows, we want every client to have a great experience. This page will feature genuine feedback from businesses we've worked with.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">REVIEWS</p>
+          <h2>What our clients think</h2>
+          <p>Our client reviews will appear here once projects are completed and clients give permission to publish their feedback.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" aria-label="No rating yet">★★★★★</div>
+          <h3>Be our first reviewer</h3>
+          <p>We're building our portfolio one local business at a time. After we've completed a project for you, we'd appreciate an honest rating and a few words about your experience.</p>
+          <p class="review-note">No testimonials have been published yet. We only display genuine client reviews with permission.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LEAVE FEEDBACK</p>
+          <h2>Worked with Apex Labs?</h2>
+          <p>Tell us how we did. Your review helps us improve and helps other local businesses decide whether we're the right fit.</p>
+        </div>
+        <form class="review-form" action="mailto:apexlabsweb17@gmail.com" method="post" enctype="text/plain">
+          <label for="review-name">Your name or business name
+            <input id="review-name" name="Name or business" required maxlength="100" placeholder="e.g. Ruan's Mechanical Services">
+          </label>
+          <label for="review-rating">Your rating
+            <select id="review-rating" name="Rating out of 5" required>
+              <option value="">Choose a rating</option>
+              <option value="5/5">★★★★★ — 5/5, Excellent</option>
+              <option value="4/5">★★★★☆ — 4/5, Very good</option>
+              <option value="3/5">★★★☆☆ — 3/5, Good</option>
+              <option value="2/5">★★☆☆☆ — 2/5, Could be better</option>
+              <option value="1/5">★☆☆☆☆ — 1/5, Needs improvement</option>
+            </select>
+          </label>
+          <label for="review-comment">Your comments
+            <textarea id="review-comment" name="Review comments" required maxlength="1500" placeholder="What was your experience working with us?"></textarea>
+          </label>
+          <label for="review-permission">Permission to publish
+            <select id="review-permission" name="Permission to publish review" required>
+              <option value="">Choose one</option>
+              <option value="Yes, I give permission to publish this review">Yes, you may publish my review</option>
+              <option value="No, please use this feedback privately only">No, this feedback is private</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Send review by email</button>
+          <p class="review-note">This opens your email app with your review details. It does not submit reviews automatically or store them on the website. If your email app doesn't open, email apexlabsweb17@gmail.com directly. We will only publish feedback with permission.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="index.html"><img class="logo-image" src="apex-logo.jpeg" alt="Apex Labs logo"><span>Apex Labs</span></a>
+      <p>Websites that make your business stand out.</p>
+      <p>Contact: <a href="mailto:apexlabsweb17@gmail.com">apexlabsweb17@gmail.com</a></p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    if (toggle && nav) toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+</body>
+</html>
